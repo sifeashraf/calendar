@@ -38,34 +38,7 @@ const months = [
   "November",
   "December",
 ];
-//this is event object in there is event it will display here
-// const eventArr = [
-//   {
-//     day:29,
-//     month:6,
-//     year:2023,
-//     events: [
-//       {
-//         title:"lorem is new tex to right ok",
-//         time:"11:10Am"
-//       }
-//     ]
-//   },
-//   {
-//     day:27,
-//     month:6,
-//     year:2023,
-//     events: [
-//       {
-//         title:"lorem is new tex to right ok",
-//         time:"11:10Am"
-//       },{
-//         title:"title",
-//         time:"11:10pm"
-//       }
-//     ]
-//   }
-// ]
+
 
 let eventArr = [];
 
@@ -89,11 +62,7 @@ function initCalender() {
   date.innerHTML = months[month] + " " + year;
 
   let days = "";
-//loop to get the prvious day of the month
-// the day variable reprsent the the number of the day in the week 0 for sunday (el 7ad)
-// now the month start from wednesday(el arb3) like this there is some days between the last month and the current month
-//so if day variable like 5 since the week start from 0 then 5 is friday (el gomaa) now well
-// decress the number from day(5) to 1 and prtend it from the previous month 
+
   for (let i = day; i > 0; i--) {
     days += `<div class="day prev-date">${prevdays - i + 1}</div>`;
   }
@@ -383,18 +352,6 @@ eventcontainer.innerHTML = events
 savelocelstorge()
 }
 
-// function how(date) {
-// eventArr.forEach((event) => {
-//   if (
-//     date === event.day &&
-//     month + 1 === event.month && 
-//       year === event.year
-//     ) {
-//       g(event)
-//     }
-// })
-// }
-// how(27)
 
 addeventsubmit.addEventListener("click",()=> {
   ///get th input value
